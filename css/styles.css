@@ -1,0 +1,44 @@
+
+.jumbotron{
+  background-image:linear-gradient(#ffff4d ,transparent 90%),
+  url("../img/background.jpg");
+  background-size:contain;
+  text-align: center;
+  color: black;
+  font-family: Impact;
+  text-shadow: 1px 1px 0 white;
+}
+.jumbotron h1{
+  font-size: 150px;
+
+}
+p{
+color: black;
+font-size: 20px;
+background: lightgreen;
+text-align: center;
+margin-top: -40px;
+}
+.container h2{
+color: white;
+
+}
+.container{
+  text-align: center;
+}
+body{
+  background: black;
+}
+.container2{
+text-align: center;
+}
+html, body {
+    width: 100%;
+}
+table {
+    margin: 0 auto;
+    margin-top: 80px;
+}
+img{
+  border: 2px solid black;
+}
