@@ -10,12 +10,14 @@
 }
 .jumbotron h1{
   font-size: 150px;
+  
 
 }
 p{
 color: black;
 font-size: 20px;
 background: lightgreen;
+box-shadow: 5px 5px 5px rgba(0,0,0,.4);
 text-align: center;
 margin-top: -40px;
 }
@@ -23,22 +25,121 @@ margin-top: -40px;
 color: white;
 
 }
-.container{
-  text-align: center;
-}
+
 body{
-  background: black;
+  background-image: url("../img/black_squares.jpeg");
+  background-size: cover;
+
+
 }
-.container2{
-text-align: center;
-}
-html, body {
-    width: 100%;
-}
-table {
-    margin: 0 auto;
-    margin-top: 80px;
-}
+
 img{
   border: 2px solid black;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.4);
+}
+#back1{
+  position:fixed;
+  margin-top: 100px;
+  margin-left:390px;
+
+}
+
+#back2{
+  position:fixed;
+  margin-top: 100px;
+  margin-left:505px;
+
+}
+
+#back3{
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 620px;
+
+}
+#back4{
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 735px;
+
+}
+#back5{
+  position: fixed;
+  margin-top: 215px;
+  margin-left: 390px;
+
+}
+
+#back6{
+  position:fixed;
+  margin-top: 215px;
+  margin-left:505px;
+
+}
+
+#back7{
+  position: fixed;
+  margin-top: 215px;
+  margin-left: 620px;
+
+}
+#back8{
+  position:fixed;
+  margin-top: 215px;
+  margin-left:735px;
+
+}
+
+
+#owl1{
+  position:fixed;
+  margin-top: 100px;
+  margin-left:390px;
+  display: none;
+}
+
+#owl2{
+  position:fixed;
+  margin-top: 100px;
+  margin-left:505px;
+  display: none;
+}
+
+#bear1{
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 620px;
+  display: none;
+}
+#duck1{
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 735px;
+  display: none;
+}
+#bear2{
+  position: fixed;
+  margin-top: 215px;
+  margin-left: 390px;
+  display: none;
+}
+#cat1{
+  position:fixed;
+  margin-top: 215px;
+  margin-left:505px;
+  display: none;
+}
+
+#duck2{
+  position: fixed;
+  margin-top: 215px;
+  margin-left: 620px;
+  display: none;
+}
+
+#cat2{
+  position:fixed;
+  margin-top: 215px;
+  margin-left:735px;
+  display: none;
 }
