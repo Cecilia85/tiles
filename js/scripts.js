@@ -1,66 +1,84 @@
-//bussiness logic//
-var square1;
-var box1;
-var square2;
-var box2;
-var square3;
-var box3;
-var square4;
-var box4;
 
-
-
-var compare = function() {
-
-if ((square1 === 1) && (square4 === 1)) {
-    $("img#bear1,img#bear2").fadeOut();
-} else if ((square2 ===1) && (square3 === 1)) {
-     $("img#duck1,img#duck2").fadeOut();
-   }
-// } else if ((box1 === 1) && (box2 === 1)) {
-//       $("img#bear1,img#duck1").hide();
-//       $("img#back1, img#back2").fadeIn();
-//
-// } else if ((box1 === 1) && (box3 === 1)) {
-//       $("img#bear1,img#duck2").hide();
-//       $("img#back1, img#back3").fadeIn();
-// }
-console.log(square1, square2, square3, square4);
-console.log(box1,box2,box3,box4);
-};
-//user interface logic//
-
-$(document).ready(function() {
-  $("img#back1").click(function() {
-    $("img#back1").hide();
-    $("img#bear1").show();
-
-    square1= 1;
-    box1=1;
-     compare();
-  });
-  $("img#back2").click(function() {
-    $("img#back2").hide();
-    $("img#duck1").show();
-
-    square2=1;
-    box2=1;
-    compare();
-  });
-  $("img#back3").click(function() {
-    $("img#back3").hide();
-    $("img#duck2").show();
-
-    square3=1;
-    box3=1;
-    compare();
-  });
-  $("img#back4").click(function() {
-    $("img#back4").hide();
-    $("img#bear2").show();
-
-    square4=1;
-    box4=1;
-    compare();
-  });
-});
+ +//functions and logic//
+ +
+ +var bearClick = 0;
+ +var duckClick = 0;
+ +var owlClick = 0;
+ +var catClick = 0;
+ +var totalClick = 0;
+ +var finishIndex = 0;
+ +
+ +function Compare3() {
+ +  if (bearClick === 2) {
+ +    document.images['third'].id = "disappear";
+ +    document.images['fifth'].id = "disappear";
+ +    bearClick = 0; totalClick = 0; finishIndex +=1;
+ +  } else if (duckClick === 2) {
+ +    document.images['fourth'].id = "disappear";
+ +    document.images['seventh'].id = "disappear";
+ +    duckClick = 0; totalClick = 0; finishIndex +=1;
+ +  } else if (owlClick === 2) {
+ +    document.images['first'].id = "disappear";
+ +    document.images['second'].id = "disappear";
+ +    owlClick = 0; totalClick = 0; finishIndex +=1;
+ +  } else if (catClick === 2) {
+ +    document.images['sixth'].id = "disappear";
+ +    document.images['eighth'].id = "disappear";
+ +    catClick = 0; totalClick = 0; finishIndex +=1;
+ +  } else if (totalClick === 2) {
+ +    $(":not([id*=disappear])").attr('src', 'img/back.gif');
+ +    totalClick = 0; bearClick = 0; duckClick = 0; owlClick = 0; catClick = 0;
+ +  }
+ +  //winner index
+ +  if (finishIndex === 4) {
+ +    $("#winner").fadeIn();
+ +  };
+ +};
+ +
+ +//jQuery and interface//
+ +$(document).ready(function() {
+ +
+ +  $('img#first').click(function() {
+ +    document.images['first'].src ='img/owl.gif';
+ +    //equivalent below
+ +    // $("#first").attr('src', 'img/bear.gif');
+ +    // document.getElementById("first").src = "img/bear.gif";
+ +    owlClick +=1; totalClick +=1;
+ +    setTimeout(Compare3, 1000);
+ +  });
+ +  $('img#second').click(function() {
+ +    document.images['second'].src ='img/owl.gif';
+ +    owlClick +=1; totalClick +=1;
+ +    setTimeout(Compare3, 1000);
+ +  });
+ +  $('img#third').click(function() {
+ +    document.images['third'].src ='img/bear.gif';
+ +    bearClick +=1; totalClick +=1;
+ +    setTimeout(Compare3, 1000);
+ +  });
+ +  $('img#fourth').click(function() {
+ +    document.images['fourth'].src ='img/duck.jpeg';
+ +    duckClick +=1; totalClick +=1;
+ +    setTimeout(Compare3, 1000);
+ +  });
+ +  $('img#fifth').click(function() {
+ +    document.images['fifth'].src ='img/bear.gif';
+ +    bearClick +=1; totalClick +=1;
+ +    setTimeout(Compare3, 1000);
+ +  });
+ +  $('img#sixth').click(function() {
+ +    document.images['sixth'].src ='img/cat.gif';
+ +    catClick +=1; totalClick +=1;
+ +    setTimeout(Compare3, 1000);
+ +  });
+ +  $('img#seventh').click(function() {
+ +    document.images['seventh'].src ='img/duck.gif';
+ +    duckClick +=1; totalClick +=1;
+ +    setTimeout(Compare3, 1000);
+ +  });
+ +  $('img#eighth').click(function() {
+ +    document.images['eighth'].src ='img/cat.jpeg';
+ +    catClick +=1; totalClick +=1;
+ +    setTimeout(Compare3, 1000);
+ +  });
+ +});
