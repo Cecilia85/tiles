@@ -43,9 +43,30 @@ function Compare3() {
   };
 };
 
+//10 second Timer//
+var seconds;
+  var temp;
+
+  function countdown() {
+    seconds = document.getElementById('countdown').innerHTML;
+    seconds = parseInt(seconds, 10);
+
+    if (seconds == 1) {
+      temp = document.getElementById('countdown');
+      alert("Times Up!");
+      return;
+    }
+
+    seconds--;
+    temp = document.getElementById('countdown');
+    temp.innerHTML = seconds;
+    timeoutMyOswego = setTimeout(countdown, 1000);
+  }
+
+
 //jQuery and interface//
 $(document).ready(function() {
-
+  countdown();
   $('img#first').click(function() {
     document.images['first'].src ='img/bear.gif';
     //equivalent below
@@ -109,4 +130,6 @@ $(document).ready(function() {
     turtleClick +=1; totalClick +=1;
     setTimeout(Compare3, 1000);
   });
+
+
 });
