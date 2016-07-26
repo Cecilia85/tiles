@@ -134,6 +134,20 @@ margin-left: 620px;
   -webkit-text-fill-color: transparent;
 
 }
+#loser {
+  display: none;
+  position:fixed;
+  margin-top:150px;
+  margin-left: 430px;
+  color: red;
+  font-family: Impact;
+  font-size: 100px;
+  letter-spacing: 5px;
+  background: -webkit-linear-gradient(red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
 
 font-face {
   font-family: "Athletic.ttf";

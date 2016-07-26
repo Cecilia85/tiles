@@ -40,8 +40,9 @@ function Compare3() {
   //winner index
   if (finishIndex === 6) {
     $("#winner").slideDown();
+  }
   };
-};
+
 
 //20 second Timer//
 var seconds;
@@ -53,7 +54,7 @@ var seconds;
 
     if (seconds == 1) {
       temp = document.getElementById('countdown');
-      alert("Times Up!");
+      $("#loser").slideDown();
       return;
     }
 
