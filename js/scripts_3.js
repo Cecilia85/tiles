@@ -43,7 +43,7 @@ function Compare3() {
   };
 };
 
-//10 second Timer//
+//20 second Timer//
 var seconds;
   var temp;
 
